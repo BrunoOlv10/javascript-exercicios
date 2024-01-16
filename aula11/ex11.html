@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: #181818;
+            color: white;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        input[type="button"] {
+            background-color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Brasileiro ou Estrangeiro?</h2>
+    <label for="pais">Qual seu país? (abreviado e em maiúsculo)</label>
+    <input type="text" name="pais" id="pais" placeholder="Digite o país">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resposta"></div>
+    <div id="msg"></div>
+
+    <script>
+        function verificar() {
+            var pais = document.getElementById("pais")
+            var resposta = document.getElementById("resposta")
+            var msg = document.getElementById("msg")
+            var pais_string = String(pais.value)
+            resposta.innerHTML = `<p>Seu país é ${pais_string}</p>`
+
+            if (pais.value !== "BRA") {
+                msg.innerHTML = "Você é ESTRANGEIRO"
+            } else {
+                msg.innerHTML = "Você é BRASILEIRO"
+            }
+        }
+    </script>
+</body>
+</html>
