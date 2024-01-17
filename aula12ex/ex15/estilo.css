@@ -17,6 +17,19 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
 }
 
+div#form {
+    width: 330px; 
+    margin: 10px 0px;
+}
+
+label, input {
+    margin-bottom: 15px;
+}
+
+div#resultado {
+    text-align: center;
+}
+
 footer {
     color: white;
     text-align: center;
