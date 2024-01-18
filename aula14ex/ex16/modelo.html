@@ -8,14 +8,21 @@
 </head>
 <body>
     <header>
-       <h1>Título</h1> 
+       <h1>Vamos contar</h1> 
     </header>
     <section>
-       <div>
-            Testando...
-       </div>
-       <div>
-        Olá!
+       <div id="form">
+            <label for="inicio">Início: </label>
+            <input type="number" name="inicio" id="inicio">
+            <label for="fim">Fim: </label>
+            <input type="number" name="fim" id="fim">
+            <label for="fim">Passo: </label>
+            <input type="number" name="passo" id="passo">
+            <input type="button" value="Contar" onclick="contar()">
+            
+        </div>
+       <div id="resultado">
+        <p>Preparando a contagem...</p>
        </div>
     </section>
     <footer>
