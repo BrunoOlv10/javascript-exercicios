@@ -2,6 +2,12 @@ let numero = [5, 8, 2, 9, 3]
 numero[5] = 6
 numero.push(7) //add na última posição
 numero.sort()
+let posicao = numero.indexOf(4)
+if (posicao == -1) {
+    console.log(`O valor é inexistente nesse vetor`)
+} else {
+    console.log(`O valor 4 está na posição ${posicao}`)
+}
 
 console.log(`O vetor é ${numero}`)
 
