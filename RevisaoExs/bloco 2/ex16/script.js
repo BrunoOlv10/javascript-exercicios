@@ -2,12 +2,14 @@ function contar() {
     let inicio = document.getElementById('inicio');
     let fim = document.getElementById('fim');
     let passo = document.getElementById('passo');
+    let mensagem = document.getElementById('mensagem');
     let resultado = document.getElementById('resultado');
 
+    resultado.innerHTML = ''
     if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
         resultado.innerHTML = 'Impossível contar!'
     } else {
-        resultado.innerHTML = 'Contando: <br>'
+        mensagem.innerHTML = 'Contando: '
         let i = Number(inicio.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
