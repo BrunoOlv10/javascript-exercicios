@@ -28,6 +28,10 @@ div#form {
     width: 400px;
 }
 
+div#imagem {
+    text-align: center;
+}
+
 label, input {
     margin-bottom: 20px;
 }
@@ -38,6 +42,13 @@ input[type="button"] {
 
 p {
     text-align: center;
+}
+
+img#imagem {
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    border: 1px solid white;
 }
 
 footer {

@@ -42,6 +42,6 @@ function verificar() {
         foto.appendChild(img)
     }
 }
-nasc.innerHTML = ''
-msg.innerHTML = ''
-foto.innerHTML = ''
+// nasc.innerHTML = ''
+// msg.innerHTML = ''
+// foto.innerHTML = ''
