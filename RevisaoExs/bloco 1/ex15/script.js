@@ -6,14 +6,13 @@ function verificar() {
     var foto = document.querySelector('img#imagem');
 
     if(nasc.value.length == 0) {
-        alert('ERRO! Nenhum número inserido!')
+        alert('[ERRO] Nenhum ano inserido!')
     } else if (nasc.value > ano) {
-        alert('ERRO! Impossível calcular, ano maior que atual!')
+        alert('[ERRO] Impossível calcular, ano maior que atual!')
     } else {
         var sexo = document.getElementsByName('sexo'); 
         var idade = ano - Number(nasc.value)
         var genero = ``
-        // img.setAttribute('id', 'foto')
         if (sexo [0].checked) {
             genero = 'homem'
             if (idade >= 0 && idade <= 17) {
@@ -42,6 +41,11 @@ function verificar() {
         foto.appendChild(img)
     }
 }
-// nasc.innerHTML = ''
+
+function limpar() {
+    document.getElementById('nasc').value = ''
+
+}
+
 // msg.innerHTML = ''
 // foto.innerHTML = ''
