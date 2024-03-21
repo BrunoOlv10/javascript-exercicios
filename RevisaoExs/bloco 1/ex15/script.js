@@ -44,8 +44,4 @@ function verificar() {
 
 function limpar() {
     document.getElementById('nasc').value = ''
-
 }
-
-// msg.innerHTML = ''
-// foto.innerHTML = ''
