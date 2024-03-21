@@ -3,7 +3,7 @@ function verificar() {
     var ano = data.getFullYear()  
     var nasc = document.querySelector('input#nasc');
     var msg = document.querySelector('p#msg');
-    var foto = document.querySelector('p#imagem');
+    var foto = document.querySelector('img#imagem');
 
     if(nasc.value.length == 0) {
         alert('ERRO! Nenhum número inserido!')
@@ -15,9 +15,9 @@ function verificar() {
         var genero = ``
         // img.setAttribute('id', 'foto')
         if (sexo [0].checked) {
-            genero = 'Homem'
+            genero = 'homem'
             if (idade >= 0 && idade <= 17) {
-                foto.src = 'img/menino.png'
+                foto.setAttribute('src', 'img/menino.png')
             } else if (idade < 30) {
                 foto.setAttribute('src', 'img/homem-jovem.png')
             } else if (idade < 60) {
@@ -27,17 +27,17 @@ function verificar() {
             }
 
         } else if (sexo [1].checked) {
-            genero = 'Mulher'
+            genero = 'mulher'
             if (idade >= 0 && idade <= 17) {
-                img.setAttribute('src', 'img/menina.png')
+                foto.setAttribute('src', 'img/menina.png')
             } else if (idade < 30) {
-                img.setAttribute('src', 'img/mulher-jovem.png')
+                foto.setAttribute('src', 'img/mulher-jovem.png')
             } else if (idade < 60) {
-                img.setAttribute('src', 'img/mulher-adulta.png')
+                foto.setAttribute('src', 'img/mulher-adulta.png')
             } else if (idade <= 130) {
-                img.setAttribute('src', 'img/idosa.png')
+                foto.setAttribute('src', 'img/idosa.png')
             }
-        } 
+        }
         msg.innerHTML = `É ${genero} com ${idade} anos`
         foto.appendChild(img)
     }

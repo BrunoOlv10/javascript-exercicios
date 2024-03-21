@@ -1,19 +1,20 @@
 html, body {
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 99%;
     width: 100%;
 }
 
 body {
     align-items: center;
-    background-color: rgb(70, 142, 236);
+    background-color: #468eec;
     font: normal 15pt Arial;
     flex-direction: column;
 }
 
-header {
+header > h1 {
     color: white;
+    margin-bottom: 10px;
 }
 
 section {
@@ -21,25 +22,38 @@ section {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
-    margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
 div#form {
     width: 400px;
-    gap: 10px;
 }
 
-div#conclusao > p#res_genero, p#res_foto {
+div#imagem {
     text-align: center;
 }
 
 label, input {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 input[type="button"] {
     display: block;
+    margin: auto;
+}
+
+p {
+    text-align: center;
+}
+
+img#imagem {
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    border: 3px solid #468eec;
+    border-radius: 50%;
+    background-color: lightsteelblue;
+    background-size: contain;
 }
 
 footer {
