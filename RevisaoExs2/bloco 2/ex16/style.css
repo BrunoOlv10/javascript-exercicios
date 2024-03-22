@@ -1,11 +1,11 @@
 html, body {
-    height: 99%;
-    width: 99%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-    display: flex;
-    justify-content: center;
     align-items: center;
     background-color: rgb(70, 142, 236);
     font: normal 15pt Arial;
@@ -32,16 +32,8 @@ label, input {
     margin-bottom: 15px;
 }
 
-div#botoes {
-    width: 300px;
-}
-
-input[type="button"] {
-    margin-bottom: 10px;
-}
-
 p {
-    margin: 5px;
+    margin: 10px 0px;
 }
 
 footer {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Contador</title>
+    <title>Modelo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,20 +13,20 @@
     <section>
         <div id="form">
             <label for="inicio">Início:</label>
-            <input type="number" id="inicio">
+            <input type="number" name="" id="inicio">
             <label for="fim">Fim:</label>
-            <input type="number" id="fim">
+            <input type="number" name="" id="fim">
             <label for="passo">Passo:</label>
-            <input type="number" id="passo">
-            <div id="botoes">
-                <input type="button" value="Contar" onclick="contar()">
-                <input type="button" value="Limpar Campos" onclick="limparCampos()">
-                <input type="button" value="Limpar Contagem" onclick="limparContagem()">
-            </div>
+            <input type="number" name="" id="passo">
         </div>
-        <div>
+        <div id="botoes">
+            <input type="button" value="Contar" onclick="contar()">
+            <input type="button" value="Limpar Campos" onclick="limparCampos()">
+            <input type="button" value="Limpar Contagem" onclick="limparContagem()">
+        </div>
+        <div id="resultado">
             <p id="msg">Preparando a contagem...</p>
-            <p id="resultado"></p>
+            <p id="contagem"></p>
         </div>        
     </section>
     <footer>
