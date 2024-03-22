@@ -1,7 +1,7 @@
 html, body {
     display: flex;
     justify-content: center;
-    height: 99%;
+    height: 98%;
     width: 100%;
 }
 
@@ -12,8 +12,9 @@ body {
     flex-direction: column;
 }
 
-header {
+h1 {
     color: white;
+    margin-bottom: 10px;
 }
 
 section {
@@ -25,27 +26,28 @@ section {
 }
 
 div#form {
-    width: 365px;
+    width: 400px;
 }
 
 label, input {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 div#botoes {
-    text-align: center;
-}
-
-input[type="button"] {
-    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 div#resultado {
     text-align: center;
 }
+
 img#imagem {
     height: 250px;
     width: 250px;
+    margin: auto;
     background-color: lightsteelblue;
     border: 3px solid #468eec;
     border-radius: 50%;
