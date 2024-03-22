@@ -7,14 +7,13 @@ html, body {
 
 body {
     align-items: center;
-    background-color: #468eec;
+    background-color: rgb(70, 142, 236);
     font: normal 15pt Arial;
     flex-direction: column;
 }
 
-header > h1 {
+header {
     color: white;
-    margin-bottom: 10px;
 }
 
 section {
@@ -26,34 +25,30 @@ section {
 }
 
 div#form {
-    width: 400px;
-}
-
-div#imagem {
-    text-align: center;
+    width: 365px;
 }
 
 label, input {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-input[type="button"] {
-    display: block;
-    margin: auto;
-}
-
-p {
+div#botoes {
     text-align: center;
 }
 
+input[type="button"] {
+    margin-bottom: 0;
+}
+
+div#resultado {
+    text-align: center;
+}
 img#imagem {
-    margin: auto;
     height: 250px;
     width: 250px;
+    background-color: lightsteelblue;
     border: 3px solid #468eec;
     border-radius: 50%;
-    background-color: lightsteelblue;
-    background-size: contain;
 }
 
 footer {

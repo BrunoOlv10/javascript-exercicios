@@ -1,35 +1,49 @@
 function verificar() {
-    var data = new Date()
-    var ano = data.getFullYear()  
+    let data = new Date()
+    let ano = data.getFullYear()
     var nasc = document.querySelector('input#nasc');
-    var msg = document.querySelector('p#msg');
-    var foto = document.querySelector('img#imagem');
+    let msg = document.querySelector('p#msg');
+    let foto = document.querySelector('img#imagem');
 
-    if(nasc.value.length == 0) {
-        alert('ERRO! Nenhum número inserido!')
+    if (nasc.value.length == 0) {
+        alert('[ERRO] Nenhum ano inserido!')
     } else if (nasc.value > ano) {
-        alert('ERRO! Impossível calcular, ano maior que atual!')
+        alert('[ERRO] Impossível calcular, ano maior que atual!')
+    } else if (nasc.value < 1894) {
+        alert('[ERRO] Idade inexistente!')
     } else {
-        var sexo = document.getElementsByName('sexo'); 
-        var idade = ano - Number(nasc.value)
-        var genero = ``
-        // img.setAttribute('id', 'foto')
-        if (sexo [0].checked) {
-            genero = 'homem'
-            if (idade >= 0 && idade <= 17) {
+        let sexo = document.getElementsByName('sexo')
+        let idade = ano - Number(nasc.value)
+        let genero = ''
+        let artigo = ''
+        if (sexo[0].checked) {
+            artigo = 'um'
+            if (idade <= 14) {
                 foto.setAttribute('src', 'img/menino.png')
-            } else if (idade < 30) {
+                genero = 'menino'
+            } else if (idade <= 17) {
+                foto.setAttribute('src', 'img/homem-jovem.png')
+                genero = 'adolescente'
+            }  
+            else if ( idade < 30) {
                 foto.setAttribute('src', 'img/homem-jovem.png')
             } else if (idade < 60) {
                 foto.setAttribute('src', 'img/homem-adulto.png')
             } else if (idade <= 130) {
                 foto.setAttribute('src', 'img/idoso.png')
             }
-
-        } else if (sexo [1].checked) {
+            if (idade > 17 && idade <= 130) {
+                genero = 'homem'
+            }
+        } else if (sexo[1].checked) {
             genero = 'mulher'
-            if (idade >= 0 && idade <= 17) {
+            artigo = 'uma'
+            if (idade < 14) {
                 foto.setAttribute('src', 'img/menina.png')
+                genero = 'menina'
+            } else if (idade <= 17) {
+                foto.setAttribute('src', 'img/mulher-jovem.png')
+                genero = 'adolescente'
             } else if (idade < 30) {
                 foto.setAttribute('src', 'img/mulher-jovem.png')
             } else if (idade < 60) {
@@ -37,11 +51,14 @@ function verificar() {
             } else if (idade <= 130) {
                 foto.setAttribute('src', 'img/idosa.png')
             }
+            if (idade > 17 && idade <= 130) {
+                genero = 'mulher'
+            }
         }
-        msg.innerHTML = `É ${genero} com ${idade} anos`
-        foto.appendChild(img)
+        msg.innerHTML = `É ${artigo} ${genero} com ${idade} anos`
     }
 }
-// nasc.innerHTML = ''
-// msg.innerHTML = ''
-// foto.innerHTML = ''
+
+function limpar() {
+    document.getElementById('nasc').value = ''
+}

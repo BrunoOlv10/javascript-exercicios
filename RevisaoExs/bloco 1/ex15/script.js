@@ -38,7 +38,6 @@ function verificar() {
             }
         }
         msg.innerHTML = `É ${genero} com ${idade} anos`
-        foto.appendChild(img)
     }
 }
 
