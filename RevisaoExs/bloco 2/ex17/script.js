@@ -1,18 +1,23 @@
 function tabuada() {
-    let numero = document.getElementById('numero')
-    let tabuada = document.getElementById('tabuada')
+    let numero = document.querySelector('input#numero')
+    let tabuada = document.querySelector('select#tabuada')
 
     if (numero.value.length == 0) {
-        alert('Por favor, digite um número acima')
+        alert('[ERRO] Nenhum número digitado!')
     } else {
-        let n = Number(numero.value)
-        let c = 1
-        tabuada.innerHTML = ""
+        let num = Number(numero.value)
+        let c = 0
+        tabuada.innerHTML = ''
+        
         while (c <= 10) {
-            let item = document.createElement('option')
-            item.text = `${n} X ${c} = ${n*c}`
+            var item = document.createElement('option')
+            item.text = `${num} x ${c} = ${num*c}`
             tabuada.appendChild(item)
             c++
         }
     }
+}
+
+function limpar() {
+    document.querySelector('input#numero').value = ''
 }
