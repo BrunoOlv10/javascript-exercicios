@@ -14,7 +14,7 @@ function contar() {
         let p = Number(passo.value)
 
         if (p <= 0) {
-            alert('[ERRO] Passo menor ou igual a 0. Vou considerar como 1!')
+            alert('[ERRO] Passo menor ou igual a 0. Vamos considerar como 1!')
             p = 1
         }
 
