@@ -1,0 +1,29 @@
+- a lista é usando a tag <select>, coloque size = 10 e a tag option com a mensagem para digitar um número acima x
+
+- no js crie a função x
+
+- puxe o input que o usuário insere o número x
+
+- puxe o select (lista) x
+
+- teste se tem algum número digitado no input com elemento.value.length == 0 x
+
+- teste se o número digitado é menor ou igual a 0 com elemento.value x
+
+- se tiver com número digitado, crie uma variável para o número puxado (tem que converter com Number e .value) x 
+
+- crie a variável de contador e defina aonde ela vai começar x 
+
+- limpe a lista com elemento.innerHTML = '' x 
+
+- abra um while (contador <= x), no x coloque até onde vai a tabuada x
+
+- dentro do while, crie uma variavel e nela crie um option com document.createElement('option') x
+
+- insira um texto dentro desse option com elemento.text = `${primeiro número} x ${segundo número} = ${v * v}` x
+
+- coloque a variavel criada dos option dentro da lista com elementolista.appendChild(elementooption) x
+
+- incremente o contador com ++ x
+
+- para o botão limpar campos faça com document.querySelector('elemento#id').value = '' x
