@@ -58,4 +58,4 @@ Dentro do else
 
 - coloque todos os resultados dentro da área de resultados com .innerHTML
 
-- faça a função do botão limpar, lista e local de resultado usando .innerHTML = '' e o vetor usando = []
+- faça a função do botão limpar, lista e local de resultado usando .innerHTML = '', o vetor usando = [] e coloque numero.focus() para continuar selecionado o input mesmo depois de usar o botão de limpar
