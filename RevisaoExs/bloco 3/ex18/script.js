@@ -5,17 +5,17 @@ let valores = []
 
 function isNumero(num) {
     if(Number(num) >= 1 && Number(num) <= 100) {
-        return true;
+        return true
     } else {
-        return false;
+        return false
     }
 }
 
 function inLista(num, lista) {
     if(lista.indexOf(Number(num)) != -1) {
-        return true;
+        return true
     } else  {
-        return false;
+        return false
     }
 }
 
@@ -26,7 +26,7 @@ function adicionar() {
         item.text = `valor ${numero.value} adicionado`
         lista.appendChild(item);
         resultado.innerHTML = ''
-    } else if (isNumero(numero.value) == false) {
+    } else if (isNumero(numero.value) === false) {
         alert('Número inválido... Digite um número entre 1 e 100!')
     } else {
         alert('Número já encontrado na lista!')
@@ -59,8 +59,8 @@ function finalizar() {
         
         resultado.innerHTML = ''
         resultado.innerHTML += `<p>Ao todo, temos ${total} números cadastrados</p>`
-        resultado.innerHTML += `<p>O maior valor informado foi ${maior}</p>`
-        resultado.innerHTML += `<p>O menor valor informado foi ${menor}</p>`
+        resultado.innerHTML += `<p>O maior valor informado é ${maior}</p>`
+        resultado.innerHTML += `<p>O menor valor informado é ${menor}</p>`
         resultado.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
         resultado.innerHTML += `<p>A média de todos os valores é ${media}</p>`
     }

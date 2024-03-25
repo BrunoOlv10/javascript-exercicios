@@ -11,7 +11,7 @@ function isNumero(n) {
     }
 }
 
-function inLista(n, l)  {
+function inLista(n, l) {
     if(l.indexOf(Number(n)) != -1) {
         return true
     } else {
@@ -25,19 +25,18 @@ function adicionar() {
         let item = document.createElement('option')
         item.text = `valor ${numero.value} adicionado`
         lista.appendChild(item)
-        resultado.innerHTML = ''
     } else if (isNumero(numero.value) == false) {
-        alert('Número inválido! Digite um número entre 1 e 100')
+        alert('Número inválido! Coloque um número entre 1 e 100')
     } else {
         alert('Número já encontrado na lista!')
     }
     numero.value = ''
     numero.focus()
-}
+} 
 
 function finalizar() {
     if (valores.length == 0) {
-        alert('Adicione algum número!')
+        alert('Adicione algum número antes de finalizar!')
     } else {
         let total = valores.length
         let maior = valores[0]
@@ -59,8 +58,8 @@ function finalizar() {
 
         resultado.innerHTML = ''
         resultado.innerHTML += `<p>Ao todo, temos ${total} números cadastrados</p>`
-        resultado.innerHTML += `<p>O maior valor informado foi ${maior}</p>`
-        resultado.innerHTML += `<p>O menor valor informado foi ${menor}</p>`
+        resultado.innerHTML += `<p>O maior valor informado é ${maior}</p>`
+        resultado.innerHTML += `<p>O menor valor informado é ${menor}</p>`
         resultado.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
         resultado.innerHTML += `<p>A média de todos os valores é ${media}</p>`
     }
