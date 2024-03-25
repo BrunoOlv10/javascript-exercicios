@@ -1,67 +1,72 @@
-var numero = document.querySelector('input#numero');
-var lista = document.querySelector('select#lista');
-var resultado = document.querySelector('div#resultado');
-var valores = []
+let numero = document.querySelector('input#numero');
+let lista = document.querySelector('select#lista');
+let resultado = document.querySelector('div#resultado');
+let valores = []
 
 function isNumero(n) {
     if(Number(n) >= 1 && Number(n) <= 100) {
-        return true
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 
 function inLista(n, l) {
-    if (l.indexOf(Number(n)) != -1) {
-        return true
-    } else {
-        return false
+    if(l.indexOf(Number(n)) != -1) {
+        return true;
+    } else  {
+        return false;
     }
 }
 
 function adicionar() {
     if(isNumero(numero.value) && !inLista(numero.value, valores)) {
-        valores.push(Number(numero.value))
+        valores.push(Number(numero.value));
         let item = document.createElement('option')
         item.text = `valor ${numero.value} adicionado`
-        lista.appendChild(item)
+        lista.appendChild(item);
         resultado.innerHTML = ''
+    } else if (isNumero(numero.value) == false) {
+        alert('Número inválido... Digite um número entre 1 e 100!')
     } else {
-        alert('Valor inválido ou já encontrado na lista')
+        alert('Número já encontrado na lista!')
     }
     numero.value = ''
-    numero.focus()
+    numero.focus();
 }
 
 function finalizar() {
-    if (valores.length == 0) {
-        alert('Adicione valores antes de finalizar!')
+    if(valores.length == 0) {
+        alert('Nenhum número inserido!')
     } else {
-        let total = valores.length
-        let maior = valores[0]
-        let menor = valores[0]
-        let soma = 0
-        let media = 0
+        total = valores.length
+        maior = valores[0]
+        menor = valores[0]
+        soma = 0
+        media = 0
+
         for(let pos in valores) {
             soma += valores[pos]
-            if (valores[pos] > maior) 
-                maior = valores[pos]
-            if (valores[pos] < menor)
-                menor = valores[pos]
-        }
 
-        media = soma / total
+            if(valores[pos] > maior) {
+                maior = valores[pos]
+            }
+            if (valores[pos] < menor) {
+                menor = valores[pos]
+            }
+        }
+        
         resultado.innerHTML = ''
-        resultado.innerHTML += `<p>Ao todo, temos ${total} números cadastrados</p>`
-        resultado.innerHTML += `<p>O maior valor informado foi ${maior}</p>`
-        resultado.innerHTML += `<p>O menor valor informado foi ${menor}</p>`
-        resultado.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
-        resultado.innerHTML += `<p>A média dos valores digitados é ${media}</p>`
+        resultado.innerHTML = `Ao todo, temos ${total} números cadastrados`
+        resultado.innerHTML = `O maior valor informado é ${maior}`
+        resultado.innerHTML = `O menor valor informado é ${menor}`
+        resultado.innerHTML = `Somando todos os valores, temos ${soma}`
+        resultado.innerHTML = `A média dos valores digitados é ${media}`
     }
 }
 
 function limpar() {
     lista.innerHTML = ''
     resultado.innerHTML = ''
-    valores = []
+    valores.innerHTML = []
 }
