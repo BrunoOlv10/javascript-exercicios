@@ -15,7 +15,7 @@ Puxe tudo fora de função!
 
 - crie a função do botão de adicionar
 
-- dentro dela use um if com as duas funções criadas fora da função, não esqueça de colocar .value na variavel e exclamação na função inLista, pois ele vai inverter o resultado do true para aceitar o false, para se não tiver na lista, ele executar o if. OBS: pode ser outros nomes, mas tem que seguir certinho
+- dentro dela use um if com as duas funções criadas fora da função, não esqueça de colocar .value na variavel de numero e exclamação na função inLista com a variavel numero e do vetor, pois ele vai inverter o resultado do true para aceitar o false, para se não tiver na lista, ele executar o if
 
 - use a variavel do vetor e .push para add valores na lista e do lado a variavel do número com Number, variavel e .value
 
@@ -35,7 +35,7 @@ Puxe tudo fora de função!
 
 - crie a função finalizar, nela vamos comparar os números
 
-- primeiro teste se o vetor tem algum número adicionado com vetor.length == 0, não tenha nada coloque uma msg avisando, mas caso tenha abra um else
+- primeiro teste se o vetor tem algum número adicionado com vetor.length == 0, caso não tenha nada coloque uma msg avisando, mas caso tenha abra um else
 
 Dentro do else
 - crie a variavel de total recebendo vetor.length
@@ -56,6 +56,6 @@ Dentro do else
 
 - fora do for, mas dentro do else faça a media receber soma / total
 
-- coloque todos os resultados dentro da área de resultados com .innerHTML
+- coloque todos os resultados dentro da área de resultados com .innerHTML e sempre concatenando com += e usando um p
 
-- faça a função do botão limpar, lista e local de resultado usando .innerHTML = '', o vetor usando = [] e coloque numero.focus() para continuar selecionado o input mesmo depois de usar o botão de limpar
+- faça a função do botão limpar, campo de número com .value,  lista e local de resultado usando .innerHTML = '', o vetor usando = [] e coloque numero.focus() para continuar selecionado o input mesmo depois de usar o botão de limpar

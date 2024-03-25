@@ -24,13 +24,14 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
-label, input[type="number"], select {
-    margin-bottom: 10px;
+label, input[type="number"] {
+    margin-bottom: 15px;
 }
 
 select {
     display: block;
     width: 150px;
+    margin-bottom: 10px;
 }
 
 footer {
