@@ -68,5 +68,6 @@ function finalizar() {
 function limpar() {
     lista.innerHTML = ''
     resultado.innerHTML = ''
-    valores.innerHTML = []
+    valores = []
+    numero.focus();
 }
