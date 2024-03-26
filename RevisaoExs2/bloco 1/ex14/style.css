@@ -27,10 +27,14 @@ section {
 div {
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
-div#foto {
-    margin-top: 20px;
+img {
+    height: 250px;
+    width: 250px;
+    border: 3px solid steelblue;
+    border-radius: 50%;
 }
 
 footer {

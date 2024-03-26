@@ -1,0 +1,16 @@
+onload = "função que será executado quando carregar a página"
+
+- pegar a data é new Date()
+
+- pegar a hora é data.getHours()
+
+- add img numa tag img já criada, basta colocar a variavel imagem.src = caminho da ft
+
+- mudar cor de fundo é com o document.body.style.backgroundColor = 'cor'
+
+- mudar a cor da borda da img é variavel imagem.style.borderColor = '' 
+
+- Horas do dia:
+Manhã - 0h até 12h - #e2cd9f
+Tarde - 12h até 18h - #b9846f
+Noite - 18h até 24h - #515154
