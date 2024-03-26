@@ -2,7 +2,11 @@ onload = "função que será executado quando carregar a página"
 
 - pegar a data é new Date()
 
-- pegar a hora é data.getHours()
+- pegar a hora é variavel da data.getHours()
+
+- pegar os minutos com variavel da data.getMinutes()
+
+- colocar mais um zero quando os minutos forem menor do que 10 com variavel minutos = (var < 10 ? `0` : '') + var
 
 - add img numa tag img já criada, basta colocar a variavel imagem.src = caminho da ft
 
