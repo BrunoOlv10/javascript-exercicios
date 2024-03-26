@@ -38,7 +38,7 @@ function adicionar() {
 }
 
 function finalizar () {
-    if (valores.length == 0) {
+    if (lista.length == 0) {
         alert('Adicione algum número antes de finalizar!')
     } else {
         let total = valores.length
@@ -59,11 +59,11 @@ function finalizar () {
         }
         media = soma / total
 
-        resultado.innerHTML += `<p>Total: ${total}</p>` 
-        resultado.innerHTML += `<p>Maior: ${maior}</p>` 
-        resultado.innerHTML += `<p>Menor: ${menor}</p>` 
-        resultado.innerHTML += `<p>Soma: ${soma}</p>` 
-        resultado.innerHTML += `<p>Média: ${media}</p>` 
+        resultado.innerHTML += `<p>Temos o total de ${total} números</p>` 
+        resultado.innerHTML += `<p>O maior número é ${maior}</p>` 
+        resultado.innerHTML += `<p>O menor número é ${menor}</p>` 
+        resultado.innerHTML += `<p>Somando todos, temos como resultado ${soma}</p>` 
+        resultado.innerHTML += `<p>A média entre esses números é ${media}</p>` 
     }
 }
 
