@@ -27,9 +27,11 @@ Puxe tudo fora de função!
 
 - para evitar que tenha algo na área de resultados, aproveite e limpe ela antes de fechar a função com variavel do lugar.innerHTML = ''
 
-- faça um else if nesse if testando se a função isNumero(numero.value) é false, se for exiba a msg que o número é inválido, pois o usuário não digitou um número entre 1 e 100
+- faça um else if nesse if testando se a função isNumero(numero.value) é false e se o campo de número está DIFERENTE de vazio (numero.value = ''), se for exiba a msg para digitar um número entre 1 e 100, pois o usuário não digitou um número entre 1 e 100
 
-- Abra um else, com a msg que o número já foi encontrado na lista 
+- Abra outro else if, testando se o campo número está vazio (numero.value = '') e coloque a msg para digitar algum número
+
+- por fim outro else if testando se o inLista(numero.value, valores) == true e a msg que o número já foi encontrado na lista com ${numero.value) para exibir na msg o número já na lista. OBS: se a função retornar true, o número já está na lista, pois ele é diferente de -1. O -1 serve para indicar que não foi encontrado na lista
 
 - fora do else, mas dentro da função add, limpe o campo de valor com campo.value = '' e coloque o campo selecionado com campo.focus()
 

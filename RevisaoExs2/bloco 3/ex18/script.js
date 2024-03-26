@@ -12,7 +12,7 @@ function isNumero(n) {
 }
 
 function inLista(n, l) {
-    if(l.indexOf(Number(n)) != -1) {
+    if (l.indexOf(Number(n)) != -1) {
         return true
     } else {
         return false
@@ -25,49 +25,51 @@ function adicionar() {
         let item = document.createElement('option')
         item.text = `valor ${numero.value} adicionado`
         lista.appendChild(item)
-    } else if (isNumero(numero.value) == false) {
-        alert('Número inválido! Coloque um número entre 1 e 100')
-    } else {
-        alert('Número já encontrado na lista!')
+    } else if (isNumero(numero.value) == false && numero.value != '') {
+        alert('Digite um número entre 1 e 100!')
+    } else if (numero.value == '') {
+        alert('Digite algum número!')
+    } else if (inLista(numero.value, valores) == true) {
+        alert(`Número ${numero.value} já presente na lista!`)
     }
+
     numero.value = ''
     numero.focus()
-} 
+}
 
-function finalizar() {
+function finalizar () {
     if (valores.length == 0) {
         alert('Adicione algum número antes de finalizar!')
     } else {
         let total = valores.length
         let maior = valores[0]
         let menor = valores[0]
-        let soma = 0
+        let soma =  0
         let media = 0
 
-        for(let pos in valores) {
+        for (let pos in valores) {
             soma += valores[pos]
 
-            if(valores[pos] > maior) {
+            if (valores[pos] > maior) {
                 maior = valores[pos]
             }
-            if(valores[pos] < menor) {
+            if (valores[pos] < menor) {
                 menor = valores[pos]
             }
         }
         media = soma / total
 
-        resultado.innerHTML = ''
-        resultado.innerHTML += `<p>Ao todo, temos ${total} números cadastrados</p>`
-        resultado.innerHTML += `<p>O maior valor informado é ${maior}</p>`
-        resultado.innerHTML += `<p>O menor valor informado é ${menor}</p>`
-        resultado.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
-        resultado.innerHTML += `<p>A média de todos os valores é ${media}</p>`
+        resultado.innerHTML += `<p>Total: ${total}</p>` 
+        resultado.innerHTML += `<p>Maior: ${maior}</p>` 
+        resultado.innerHTML += `<p>Menor: ${menor}</p>` 
+        resultado.innerHTML += `<p>Soma: ${soma}</p>` 
+        resultado.innerHTML += `<p>Média: ${media}</p>` 
     }
 }
 
 function limpar() {
-    numero.value = ''
     lista.innerHTML = ''
+    numero.value = ''
     resultado.innerHTML = ''
     valores = []
     numero.focus()
