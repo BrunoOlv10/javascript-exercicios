@@ -1,0 +1,27 @@
+- antes de começar, coloque o código de acessibilidade da navegação com tab
+
+- pegar data com new Date()
+
+- pegar ano com variavel acima.getFullYear()
+
+- testar se tem algum valor digitado no campo 
+
+- testar se o ano digitado é maior que o atual
+
+- testar se o ano é menor que 1894 e colocar a msg com o emoji \u{1F923}. OBS: o código que está no meio dos {} é do emoji, o resto é para conseguir que ele seja exibido
+
+- no else crie a variavel sexo pegando pelo name o sexo do form 
+
+- calcule a idade da pessoa
+
+- crie a variavel pessoa vazia que vai servir para identificar se é homem, mulher, menina, menino, adolescente
+
+- crie a variavel artigo vazia que vai ser para colocar "a" ou "o" dependendo do genero da pessoa
+
+- comece a fazer os testes, se for do sexo masculino o sexo vai ser sexo[0].checked, se não o número muda pra 1
+
+- coloque as fotos varfoto.setAttribute('src', 'caminho da ft)' ou varfoto.src = 'caminho da ft'
+
+- dentro do else, que engloba os testes de idade, coloque a msg exibindo o valor das variaveis artigo, pessoa e idade
+
+- crie o botão limpando todos os campos (ano de nascimento, local da msg, e a img). OBS: para limpar a img, crie uma nova variavel e puxar a tag img do html, em seguida use a variavel criada com .src = '', para indicar que ela ficará vazia

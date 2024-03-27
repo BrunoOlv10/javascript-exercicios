@@ -1,16 +1,43 @@
+document.getElementById('nasc').addEventListener('keydown', function(event) {
+    if (event.key === 'Tab') {
+        document.getElementById('masc').focus();
+        event.preventDefault();
+    }
+});
+
+document.getElementById('masc').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        document.getElementById('masc').click();
+        event.preventDefault();
+    } else if (event.key === 'Tab' && !event.shiftKey) {
+        document.getElementById('fem').focus();
+        event.preventDefault();
+    }
+});
+
+document.getElementById('fem').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        document.getElementById('fem').click();
+        event.preventDefault();
+    } else if (event.key === 'Tab' && event.shiftKey) {
+        document.getElementById('masc').focus();
+        event.preventDefault();
+    }
+});
+
 function verificar() {
     let data = new Date()
     let ano = data.getFullYear()
     let nasc = document.querySelector('input#nasc')
     let msg = document.querySelector('p#msg')
-    let foto = document.querySelector('img#imagem')
+    let foto = document.querySelector('img#image')
 
     if (nasc.value.length == 0) {
         alert('[ERRO] Nenhum número inserido!')
     } else if (nasc.value > ano) {
         alert('[ERRO] Ano inserido maior que o atual!')
     } else if (nasc.value < 1894) {
-        alert('[ERRO] Idade inexistente!')
+        alert('[ERRO] Já morreu kkkk \u{1F923}')
     } else {
         let sexo = document.getElementsByName('sexo') 
         let idade = ano - Number(nasc.value)
@@ -60,5 +87,8 @@ function verificar() {
 }
 
 function limpar() {
-    document.getElementById('nasc').value = ''
+    nasc.value = ''
+    msg.innerHTML = '<p>Preencha tudo para ver o resultado abaixo...</p>'
+    let img = document.querySelector('img#image')
+    img.src = ''
 }
