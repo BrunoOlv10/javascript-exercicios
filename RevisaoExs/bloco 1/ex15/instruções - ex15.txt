@@ -10,18 +10,27 @@
 
 - testar se o ano é menor que 1894 e colocar a msg com o emoji \u{1F923}. OBS: o código que está no meio dos {} é do emoji, o resto é para conseguir que ele seja exibido
 
-- no else crie a variavel sexo pegando pelo name o sexo do form 
+- no else, antes de criar as variaveis, coloque a borda da imagem na cor padrão pra evitar bugs com imagem(variavel).style.borderColor = '' e imagem.src = ''
+
+- crie a variavel sexo pegando pelo name o sexo do form 
 
 - calcule a idade da pessoa
 
 - crie a variavel pessoa vazia que vai servir para identificar se é homem, mulher, menina, menino, adolescente
 
-- crie a variavel artigo vazia que vai ser para colocar "a" ou "o" dependendo do genero da pessoa
+- crie a variavel artigo vazia que vai ser para colocar "uma" ou "um" dependendo do genero da pessoa
 
-- comece a fazer os testes, se for do sexo masculino o sexo vai ser sexo[0].checked, se não o número muda pra 1
+- comece a fazer os testes, se for do sexo masculino o sexo vai ser sexo[0].checked, se não o número muda pra 1. OBS: se for masculino a borda ficará na cor padrão, se for feminino vai mudar pra roxo
+
+- relação de idades:
+até 14 - menino(a) - menino.png/menina.png
+até 17 - adolescente - homem-jovem.png/mulher-jovem.png
+até 25 - homem/mulher - homem-jovem.png/mulher-jovem.png
+até 60 - homem/mulher - homem-adulto.png//mulher-adulta.png
+até 130 - senhor(a) -  idoso.png/idosa.png
 
 - coloque as fotos varfoto.setAttribute('src', 'caminho da ft)' ou varfoto.src = 'caminho da ft'
 
 - dentro do else, que engloba os testes de idade, coloque a msg exibindo o valor das variaveis artigo, pessoa e idade
 
-- crie o botão limpando todos os campos (ano de nascimento, local da msg, e a img). OBS: para limpar a img, crie uma nova variavel e puxar a tag img do html, em seguida use a variavel criada com .src = '', para indicar que ela ficará vazia
+- crie o botão limpando todos os campos (ano de nascimento, colocando o masculino marcado, local da msg, borda da img na cor padrão - #468eec, img e colocando foco no campo). OBS: para colocar masculino marcado, basta puxar o masculino e depois colocar a variavel masculino.checked = true. Para mexer na cor da borda da imagem é com imagem(variavel).style.borderColor = ''

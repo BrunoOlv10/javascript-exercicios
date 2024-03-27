@@ -1,20 +1,19 @@
 html, body {
     display: flex;
     justify-content: center;
-    height: 98%;
+    height: 99%;
     width: 100%;
 }
 
 body {
     align-items: center;
-    background-color: rgb(70, 142, 236);
+    background-color: #468eec;
     font: normal 15pt Arial;
     flex-direction: column;
 }
 
-h1 {
+header {
     color: white;
-    margin-bottom: 10px;
 }
 
 section {
@@ -29,25 +28,27 @@ div#form {
     width: 400px;
 }
 
-label, input {
-    margin-bottom: 20px;
+input[type="number"], [type="radio"] {
+    margin-bottom: 15px;
 }
 
 div#botoes {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 10px;
+}
+
+input[type="button"] {
+ margin-top: 5px;
 }
 
 div#resultado {
     text-align: center;
 }
 
-div#foto {
+img {
     height: 250px;
     width: 250px;
-    margin: auto;
     background-color: lightsteelblue;
     border: 3px solid #468eec;
     border-radius: 50%;
