@@ -7,7 +7,7 @@ html, body {
 
 body {
     align-items: center;
-    background-color: #468eec;
+    background-color: rgb(70, 142, 236);
     font: normal 15pt Arial;
     flex-direction: column;
 }
@@ -28,7 +28,7 @@ div#form {
     width: 400px;
 }
 
-input[type="number"], [type="radio"] {
+input[type='number'], input[type='radio'] {
     margin-bottom: 15px;
 }
 
@@ -36,10 +36,7 @@ div#botoes {
     display: flex;
     justify-content: center;
     gap: 10px;
-}
-
-input[type="button"] {
- margin-top: 5px;
+    margin-top: 10px;
 }
 
 div#resultado {
@@ -53,7 +50,7 @@ img {
     border: 3px solid #468eec;
     border-radius: 50%;
 }
-
+ 
 footer {
     color: white;
     font-style: italic;
