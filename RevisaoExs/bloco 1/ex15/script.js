@@ -94,7 +94,8 @@ function verificar() {
         msg.innerHTML = `Temos ${artigo} ${pessoa} com ${idade} anos`
     }
 
-    nasc.focus();   
+    nasc.value = '';
+    nasc.focus();
 }
 
 function limpar() {

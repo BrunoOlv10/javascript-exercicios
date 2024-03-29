@@ -31,11 +31,13 @@ function verificar() {
     let nasc = document.querySelector('input#nasc')
     let msg = document.querySelector('p#msg')
     let imagem = document.querySelector('img#imagem')
-    
+
     if (nasc.value.length == 0) {
-        alert('Nenhum ano digitado! Digite um ano')
-    } else if (nasc.value > ano) {
+        alert('Nenhum valor digitado!')
+        nasc.focus()
+    } else if (nasc.value > 2024) {
         alert('Ano digitado maior que 2024')
+        nasc.focus()
     } else if (nasc.value < 1894) {
         alert('Já morreu kkkkk \u{1F923}')
     } else {
@@ -44,17 +46,16 @@ function verificar() {
 
         let sexo = document.getElementsByName('sexo')
         let idade = ano - nasc.value
-        let pessoa = ''
         let artigo = ''
+        let pessoa = ''
 
         if (sexo[0].checked) {
             artigo = 'um'
-
+            
             if (idade <= 14) {
                 pessoa = 'menino'
                 imagem.src = 'img/menino.png'
             } else if (idade <= 17) {
-                pessoa = 'adolescente'
                 imagem.src = 'img/homem-jovem.png'
             } else if (idade <= 25) {
                 imagem.src = 'img/homem-jovem.png'
@@ -64,10 +65,10 @@ function verificar() {
                 pessoa = 'senhor'
                 imagem.src = 'img/idoso.png'
             }
-
-            if (idade >= 18 && idade <= 59) {
+            
+            if (idade >= 18 && idade <= 130) {
                 pessoa = 'homem'
-            }	
+            }
         } else if (sexo[1].checked) {
             artigo = 'uma'
             imagem.style.borderColor = 'purple'
@@ -76,7 +77,6 @@ function verificar() {
                 pessoa = 'menina'
                 imagem.src = 'img/menina.png'
             } else if (idade <= 17) {
-                pessoa = 'adolescente'
                 imagem.src = 'img/mulher-jovem.png'
             } else if (idade <= 25) {
                 imagem.src = 'img/mulher-jovem.png'
@@ -87,9 +87,12 @@ function verificar() {
                 imagem.src = 'img/idosa.png'
             }
 
-            if (idade >= 18 && idade <= 59) {
+            if (idade >= 18 && idade <= 130) {
                 pessoa = 'mulher'
-            }	
+            }
+        }
+        if (idade >= 15 && idade <= 17) {
+            pessoa = 'adolescente'
         }
         
         msg.innerHTML = `Temos ${artigo} ${pessoa} com ${idade} anos`
@@ -98,10 +101,10 @@ function verificar() {
 
 function limpar() {
     nasc.value = ''
+    nasc.focus()
+    msg.innerHTML = 'Preencha tudo para ver o resultado abaixo...'
     let masc = document.querySelector('input#masc')
     masc.checked = true
-    msg.innerHTML = 'Preencha tudo para ver o resultado abaixo...'
     imagem.style.borderColor = '#468eec'
     imagem.src = ''
-    nasc.focus()
 }
