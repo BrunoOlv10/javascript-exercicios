@@ -33,14 +33,14 @@ label, input {
 }
 
 div#botoes {
-    width: 300px;
+    width: 400px;
 }
 
 input[type="button"] {
     margin-bottom: 10px;
 }
 
-p {
+div > p {
     margin: 5px;
 }
 

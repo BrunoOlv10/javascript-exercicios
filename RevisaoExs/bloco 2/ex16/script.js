@@ -31,9 +31,9 @@ function contar() {
 }
 
 function limparCampos() {
-    document.querySelector('input#inicio').value = ''
-    document.querySelector('input#fim').value = ''
-    document.querySelector('input#passo').value = ''
+    inicio.value = ''
+    fim.value = ''
+    passo.value = ''
 }
 
 function limparContagem() {
