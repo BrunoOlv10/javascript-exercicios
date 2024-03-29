@@ -1,0 +1,19 @@
+Contador pulando ou não
+
+- necessário 1 área pra msg e outra pra contagem
+
+- testar se algum dos 3 campos está vazio, se 1 estiver vazio e os outros não, mesmo assim disparar msg avisando ao usuário
+
+- caso todos os campos estejam preenchidos corretamente, no else coloque a msg 'contando' no campo de msg, crie variaveis respectivas pra cada campo e converta nelas os números recebidos por Number(variavel.value). Essas novas variaveis vão servir para deixar tudo convertido e não precisar ficar convertendo toda hora, assim vai diminuir o código
+
+- primeiro teste se o passo é menor ou igual a 0, caso seja dispare uma msg avisando sobre isso e fale que vai considerar o passo valendo como 1
+
+- faça outro if vendo se o inicio é menor que o final (contagem normal), abra um for dentro (let c = v; c <= v; c += v), a primeira condição é de onde o contador vai começar, a segunda é até aonde ele vai para parar e não ser infinito e por último é de quanto em quanto ele vai pular
+
+- abra um else if, caso o inicio seja maior que o fim (então a contagem vai ficar inversa, de trás pra frente) e faça o for de acordo com isso. OBS: lembrando que terá que decrementar, então ao invés de '+=', terá que usar '-='
+
+- dentro de cada um dos for, é necessário colocar a mensagem para ir para área de msg do HTML, a mensagem basicamente é composta pelo contador e pelo emoji de código \u{1F449}
+
+- fora dos for, mas ainda dentro do else, coloque o emoji de bandeira, de código \u{1F3C1}, para sinalizar o final da contagem
+
+- faça os botões de limpar os campos e a área de resultados
