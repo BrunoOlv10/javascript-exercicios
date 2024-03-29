@@ -4,6 +4,7 @@
 
 - pegar ano com variavel acima.getFullYear()
 
+Nos 3 testes abaixo, depois da msg, coloque sempre o foco no campo
 - testar se tem algum valor digitado no campo 
 
 - testar se o ano digitado é maior que o atual
