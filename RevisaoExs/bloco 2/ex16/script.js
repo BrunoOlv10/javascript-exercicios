@@ -9,12 +9,16 @@ function contar() {
         alert('Todos os campos vazios! Preencha todos antes de continuar')
     } else if (inicio.value.length == 0) {
         alert('Preencha o campo "início"!')
+        inicio.focus()
     } else if (fim.value.length == 0) {
         alert('Preencha o campo "fim"!')
+        fim.focus()
     } else if (passo.value.length == 0) {
         alert('Preencha o campo "passo"!')
+        passo.focus()
     } else {
         msg.innerHTML = 'Contando: '
+        contagem.innerHTML = ''
         
         let i = Number(inicio.value)
         let f = Number(fim.value)
@@ -45,6 +49,6 @@ function limparCampos() {
 }
 
 function limparContagem() {
-    msg.innerHTML = ''
+    msg.innerHTML = 'Preparando a contagem...'
     contagem.innerHTML = ''
 }

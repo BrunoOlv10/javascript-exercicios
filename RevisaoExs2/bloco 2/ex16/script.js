@@ -6,35 +6,39 @@ function contar() {
     let contagem = document.querySelector('p#contagem');
 
     if (inicio.value.length == 0 && fim.value.length == 0 && passo.value.length == 0) {
-        alert('Todos os campos vazios! Preencha todos antes de continuar')
+        alert('Nenhum campo preenchido! Preencha todos antes de continuar')
     } else if (inicio.value.length == 0) {
-        alert('Preencha o campo "início"!')
+        alert('Preencha o campo "inicio"')
+        inicio.focus()
     } else if (fim.value.length == 0) {
-        alert('Preencha o campo "fim"!')
+        alert('Preencha o campo "fim"')
+        fim.focus()
     } else if (passo.value.length == 0) {
-        alert('Preencha o campo "passo"!')
+        alert('Preencha o campo "passo"')
+        passo.focus()
     } else {
         msg.innerHTML = 'Contando: '
-        
+        contagem.innerHTML = ''
+
         let i = Number(inicio.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
 
         if (p <= 0) {
-            alert('Passo menor ou igual a 0! Passo será considerado como 1')
+            alert('Passo menor ou igual a 0! Vai ser considerado como 1')
             p = 1
         }
 
         if (i < f) {
             for (let c = i; c <= f; c += p) {
-                msg.innerHTML += `${c} \u{1F449} `
+                contagem.innerHTML += `${c} \u{1F449}`
             }
         } else if (i > f) {
-            for (let c = i; c >= f; c -= p) {
-                msg.innerHTML += `${c} \u{1F449} `
+            for (let c = i; c >= f; c-= p) {
+                contagem.innerHTML += `${c} \u{1F449}`
             }
         }
-        msg.innerHTML += `\u{1F3C1} `
+        contagem.innerHTML += '\u{1F3C1}'
     }
 }
 
@@ -45,6 +49,6 @@ function limparCampos() {
 }
 
 function limparContagem() {
-    msg.innerHTML = ''
+    msg.innerHTML = 'Preparando a contagem...'
     contagem.innerHTML = ''
 }

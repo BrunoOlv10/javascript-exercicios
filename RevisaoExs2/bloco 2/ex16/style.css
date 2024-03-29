@@ -12,9 +12,8 @@ body {
     flex-direction: column;
 }
 
-h1 {
+header {
     color: white;
-    margin-bottom: 15px;
 }
 
 section {
@@ -30,7 +29,11 @@ div#form {
 }
 
 input[type="number"] {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+input[type="button"] {
+    margin-top: 10px;
 }
 
 footer {
