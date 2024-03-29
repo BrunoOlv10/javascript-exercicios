@@ -12,8 +12,9 @@ body {
     flex-direction: column;
 }
 
-header {
+h1 {
     color: white;
+    margin-bottom: 10px;
 }
 
 section {
