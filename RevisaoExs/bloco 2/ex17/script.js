@@ -4,6 +4,9 @@ function tabuada() {
 
     if (numero.value.length == 0) {
         alert('[ERRO] Nenhum número digitado!')
+    } else if (numero.value <= 0) {
+        alert('[ERRO] Número digitado menor ou igual a 0!')
+        numero.focus()
     } else {
         let num = Number(numero.value)
         let c = 0
@@ -19,5 +22,6 @@ function tabuada() {
 }
 
 function limpar() {
-    document.querySelector('input#numero').value = ''
+    numero.value = ''
+    numero.focus()
 }
