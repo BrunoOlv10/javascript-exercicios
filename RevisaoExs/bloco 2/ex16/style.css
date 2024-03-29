@@ -33,6 +33,16 @@ input[type="number"] {
     margin-bottom: 15px;
 }
 
+input[type = "button"] {
+    margin-bottom: 5px;
+}
+
+div > p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+
 footer {
     color: white;
     font-style: italic;

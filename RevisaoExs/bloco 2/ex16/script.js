@@ -27,14 +27,14 @@ function contar() {
 
         if (i < f) {
             for (let c = i; c <= f; c += p) {
-                msg.innerHTML += `${c} \u{1F449} `
+                contagem.innerHTML += `${c} \u{1F449} `
             }
         } else if (i > f) {
             for (let c = i; c >= f; c -= p) {
-                msg.innerHTML += `${c} \u{1F449} `
+                contagem.innerHTML += `${c} \u{1F449} `
             }
         }
-        msg.innerHTML += `\u{1F3C1} `
+        contagem.innerHTML += `\u{1F3C1} `
     }
 }
 
