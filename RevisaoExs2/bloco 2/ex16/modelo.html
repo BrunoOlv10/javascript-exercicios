@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamos contar</title>
+    <title>Super Contador</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Vamos contar</h1>
+        <h1>Vamos Contar</h1>
     </header>
     <section>
         <div id="form">
             <label for="inicio">Início:</label>
-            <input type="number" name="" id="inicio">
+            <input type="number" id="inicio">
             <label for="fim">Fim:</label>
-            <input type="number" name="" id="fim">
+            <input type="number" id="fim">
             <label for="passo">Passo:</label>
-            <input type="number" name="" id="passo">
+            <input type="number" id="passo">
         </div>
-        <div id="botoes">
+        <div>
             <input type="button" value="Contar" onclick="contar()">
             <input type="button" value="Limpar Campos" onclick="limparCampos()">
             <input type="button" value="Limpar Contagem" onclick="limparContagem()">
         </div>
-        <div id="resultado">
+        <div>
             <p id="msg">Preparando a contagem...</p>
             <p id="contagem"></p>
         </div>        
