@@ -12,9 +12,8 @@ body {
     flex-direction: column;
 }
 
-h1 {
+header {
     color: white;
-    margin: 10px 0;
 }
 
 section {
@@ -25,8 +24,8 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
-select {
-    margin-top: 15px;
+input {
+    margin-bottom: 15px;
 }
 
 footer {

@@ -1,4 +1,4 @@
-- a lista é usando a tag <select>, coloque size = 10 e a tag option com a mensagem para digitar um número acima 
+- a lista é usando a tag <select>, coloque size = 11 e a tag option com a mensagem para digitar um número acima 
 
 - puxe o select (lista)
 

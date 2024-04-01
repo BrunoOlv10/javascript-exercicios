@@ -1,25 +1,35 @@
-function tabuada() {
+function gerarTabuada() {
     let numero = document.querySelector('input#numero')
-    let lista = document.querySelector('select#tabuada')
-
+    let tabuada = document.querySelector('select#tabuada')
+    
     if (numero.value.length == 0) {
-        alert('[ERRO] Nenhum número digitado!')
+        alert('Nenhum número digitado!')
+        numero.focus()
     } else if (numero.value <= 0) {
-        alert('[ERRO] Digite um número maior que 0!')
+        alert('Número menor ou igual a 0')
+        numero.focus()
     } else {
         let num = Number(numero.value)
-        let cont = 0
-        lista.innerHTML = ''
+        let contador = 0
+        tabuada.innerHTML = ''
 
-        while (cont <= 10) {
+        while (contador <= 10) {
             let item = document.createElement('option')
-            item.text = `${num} x ${cont} = ${num*cont}`
-            lista.appendChild(item)
-            cont ++
+            item.text = `${num} X ${contador} = ${num * contador}`
+            tabuada.appendChild(item)
+            contador ++
         }
     }
 }
 
-function limpar() {
-    document.querySelector('input#numero').value = ''  
+function limparCampo() {
+    numero.value = ''
+    numero.focus()
+
+    while (tabuada.options.length > 0) {
+        tabuada.remove(0)
+    }
+    let msg = document.createElement('option')
+    msg.text = 'Digite um número acima'
+    tabuada.appendChild(msg)
 }
