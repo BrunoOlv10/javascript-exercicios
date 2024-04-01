@@ -6,7 +6,7 @@ function gerarTabuada() {
         alert('Nenhum número digitado!')
         numero.focus()
     } else if (numero.value <= 0) {
-        alert('Número menor ou igual a 0')
+        alert('Número menor ou igual a 0!')
         numero.focus()
     } else {
         let num = Number(numero.value)
@@ -25,10 +25,7 @@ function gerarTabuada() {
 function limparCampo() {
     numero.value = ''
     numero.focus()
-
-    while (tabuada.options.length > 0) {
-        tabuada.remove(0)
-    }
+    tabuada.innerHTML = ''
     let msg = document.createElement('option')
     msg.text = 'Digite um número acima'
     tabuada.appendChild(msg)

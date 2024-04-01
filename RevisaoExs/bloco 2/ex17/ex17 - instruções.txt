@@ -1,10 +1,10 @@
-- a lista é usando a tag <select>, coloque size = 11 e a tag option com a mensagem para digitar um número acima 
+- a lista é usando a tag <select>, coloque size = 11 e a tag option com a mensagem para digitar um número acima
 
 - puxe o select (lista)
 
-- teste se tem algum número digitado no input
+- teste se tem algum número digitado no input e coloque foco no campo
 
-- teste se o número digitado é menor ou igual a 0
+- teste se o número digitado é menor ou igual a 0 e coloque foco no campo
 
 - se tiver com número digitado, crie uma variável para o número puxado para converter ele para number
 
@@ -22,4 +22,4 @@
 
 - incremente o contador com ++ 
 
-- faça o botão para limpar
+- faça o botão para limpar tudo. OBS: para limpar a lista, basta usar o .innerHTML e depois crie uma variavel, faça o mesmo processo de criação de um novo option, para add a msg inicial de digitar um número acima
