@@ -22,7 +22,7 @@ function gerarTabuada() {
     }
 }
 
-function limparCampo() {
+function limpar() {
     numero.value = ''
     numero.focus()
     tabuada.innerHTML = ''
