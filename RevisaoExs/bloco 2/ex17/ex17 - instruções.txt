@@ -20,6 +20,6 @@
 
 - coloque a variavel criada dos option dentro da lista com elementolista.appendChild(elementooption) 
 
-- incremente o contador com ++ 
+- incremente o contador com ++
 
 - faça o botão para limpar tudo. OBS: para limpar a lista, basta usar o .innerHTML e depois crie uma variavel, faça o mesmo processo de criação de um novo option, para add a msg inicial de digitar um número acima
